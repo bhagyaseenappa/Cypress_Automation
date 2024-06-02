@@ -1,0 +1,18 @@
+describe('Login', () => {
+    beforeEach(() => {
+        cy.fixture('users.json').as('user').then((data) => {
+            cy.log(data)
+            globalThis.data = data
+
+        })
+
+    })
+    it('should login successfully', () => {
+        cy.visit('https://automationtesting.co.uk/loginPortal.html')
+        cy.get('#login_text').type(globalThis.data[0].username)
+        cy.get('#login_password').type(globalThis.data[0
+            
+        ].email)
+        cy.get('#login_btn').click()
+    })
+})

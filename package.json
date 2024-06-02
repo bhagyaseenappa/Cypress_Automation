@@ -1,0 +1,18 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:headed:edge": "cypress run --config browser=MicrosoftEdge --headed",
+    "cy:headed:chrome": "cypress run --config browser=chrome --headed",
+    "cy:run:single": "cypress run --spec cypress/e2e/tests/login.cy.js --headed"
+  },
+  "author": "Bhagya Seenappa",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.10.0"
+  }
+}
